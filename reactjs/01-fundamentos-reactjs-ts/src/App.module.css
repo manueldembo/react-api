@@ -1,0 +1,19 @@
+.wrapper{
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: flex-start;/*isso vai evitar que ele tente eticar e dar o mesmo tamanho aos dois*/
+    
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 85.5%;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
