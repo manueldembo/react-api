@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     :focus {
         border: 0;
-        box-shadow: 0 0 0 2px ${props => props.theme["gray-500"]};
+        box-shadow: 0 0 0 2px ${props => props.theme["green-500"]};
     }
     body {
         background: ${props => props.theme["gray-800"]};
@@ -19,3 +19,4 @@ export const GlobalStyle = createGlobalStyle`
         font: 400 1rem Roboto, sans-serif;
     }
 `
+
