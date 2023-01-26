@@ -1,8 +1,10 @@
-import { useContext } from 'react'
+import { Context, useContextSelector } from 'use-context-selector'
 import { TransactionContext } from '../contexts/TransactionContext'
 
 export function useSummary() {
-  const { transactions } = useContext(TransactionContext)
+  const transactions = useContextSelector(TransactionContext, (context) => {
+    return context.transactions
+  })
 
   const summary = transactions.reduce(
     (acc, transaction) => {
@@ -24,4 +26,9 @@ export function useSummary() {
   )
 
   return summary
+}
+function useCotnextSelector(
+  TransactionContext: Context<TransactionContextType>,
+): { transactions: any } {
+  throw new Error('Function not implemented.')
 }
